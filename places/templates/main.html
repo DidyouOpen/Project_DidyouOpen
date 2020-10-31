@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}{% endblock %}
+{% block title %}라이온더스{% endblock %}
+{% block content %}
+<!-- 작업자 : 하얀 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DidyouOpen?</title>
+    <!-- 외부에서 가져오는 css 파일 경로 -->
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 우리 css 파일 경로 -->
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <!-- 외부에서 가져오는 JS 파일 경로 -->
+    <script src="../package/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <img class="logo" src="../base/img/logo.png" alt="">
+            <div class="header-links">
+                <a href="">Stores</a>
+                <a href="">About</a>
+                <a href="">Social Login</a>
+            </div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div class="content">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="head-line-text">
+                            <h1>Neon-Moon;</h1>
+                        </div>
+                        <div class="main-text">
+                            [ SLEEPY WORLD ]
+                            <br>
+                            7-80년대 미국 레트로 스타일을 재해석한 네온문의 아이덴티티를 담고 있는 슬리피 월드 오리지널 캐릭터입니다.
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="head-line-text">
+                            <h1>Macaron;</h1>
+                        </div>
+                        <div class="main-text">
+                            [ ANALOG ]
+                            <br>
+                            내 가족이 먹는 것처럼 신경써서 정성껏 만드는 수제 마카롱입니다.
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="head-line-text">
+                            <h1>Dessert;</h1>
+                        </div>
+                        <div class="main-text">
+                            [ SWEET ]
+                            <br>
+                            이탈리아 감성을 담아 만드는 이탈리안 디저트 가게입니다.
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- Swiper 끝 -->
+            <!-- 등록된 가게 목록 (DB 더미 데이터 연동)-->
+            <div class="stores">
+                <label class="title bold-text">가게 목록</label>
+                <hr>
+            </div>
+            <!-- 가게 이미지들 -->
+            <div class="stores-img-box">
+                <img class="stores-img" src="../static/images/store1.jpg" alt="">
+                <img class="stores-img" src="../static/images/store2.jpg" alt="">
+                <img class="stores-img" src="../static/images/store3.jpg" alt="">
+                <img class="stores-img" src="../static/images/store4.jpg" alt="">
+                <!-- 가게 이름 -->
+                <label class="store-title">윤스마카롱</label>
+                <label class="store-title">달달마리</label>
+                <label class="store-title">오페라빈</label>
+                <label class="store-title">두나네 마카롱</label>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <div class="footer">
+            <div class="footer-text">
+                "Did you Open?"
+            </div>
+            <div class="text-light">
+                <label class="bold-text">(주)낮과밥</label><br><br>
+                팀장 : 장하얀 / 충청남도 천안시 서북구 불당4로 105 오엔시티 호텔<br>
+                호스팅 서비스 : 낮과밥<br><br>
+                COPYRIGHT © TENBYTEN ALL RIGHTS RESERVED.
+            </div>
+            <div class="footer-cs">
+                <label class="bold-text">1:1 상담 문의 > </label><br><br>
+                <label class="light-text">문의는 1:1 상담을 이용해주세요.</label>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 우리 JS 파일 경로-->
+<script src="../static/js/main.js"></script>
+
+</html>
+{% endblock %}

@@ -1,0 +1,226 @@
+/*
+
+    base css입니다.
+    Noto Sans KR, Dancing Script 폰트 추가했습니다.
+    
+*/
+
+/* css 초기화, 폰트 import */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+/* 메인 테마 컬러 정의 */
+:root {
+    --coral: #f08080;
+    /* 스와이퍼 페이지네이션 컬러 덮어쓰기 !!*/
+    --swiper-theme-color: lightcoral;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* ************************************************************ */
+/* text 관련 클래스 */
+.bold-text {
+    font-weight: 700;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+/* ************************************************************ */
+
+/* Header */
+.header {
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 10vw 20px 10vw;
+}
+
+.header-links {
+    margin-left: 44vw;
+    width: 20vw;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 1px 2px 2px lightcoral;
+}
+
+.kakao-login {
+    background-color: white;
+    border: 2px solid lightcoral;
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.kakao-login>a {
+    font-weight: 400;
+}
+
+/* ************************************************************ */
+
+/* Footer */
+.footer {
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    display: inline-flex;
+    width: 100%;
+    padding: 2vw 12vw 2vw 12vw;
+    border-top: 1px solid var(--coral);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../base/img/background-img.png');
+}
+
+.footer-text {
+    font-size: 25pt;
+    font-family: 'Dancing Script', cursive;
+    margin-right: 5vw;
+}
+
+.footer-cs {
+    margin-left: 15vw;
+}
+
+/* ************************************************************ */
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid lightcoral;
+}
+
+.stores {
+    margin-top: 8%;
+}
+
+.title {
+    font-size: 20pt;
+}
+
+/* 스와이퍼 컨테이너 시작 */
+
+.swiper-container {
+    width: 100%;
+    height: 50vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 스와이퍼 안의 슬라이드들 */
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide:first-child {
+    background-image: url(https://pbs.twimg.com/media/EczCEXiVcAAPKdO.jpg);
+}
+
+.swiper-slide:nth-child(2) {
+    background-image: url(https://2.bp.blogspot.com/-sw4TtAG2hj4/XplmVKfeSEI/AAAAAAAALlo/Ox67EIZkMCkRt-064sPAz9c5mIkLAWcSACLcBGAsYHQ/s1600/with.macaron_84663819_187341109034716_1278072600252274269_n.jpg);
+}
+
+.swiper-slide:last-child {
+    background-image: url(https://lh3.googleusercontent.com/proxy/n1CQ20hp8prkL0S9BXhUw9Rvo2DbfoI8LlMcD5TLGQKTCtJmck2E7BM6gw2C1ZIQish_A1GXBUsNwL49TgXD8mVRvxqILcnE3cvcDjVDbabEthRyHu5G-kfvFDO-oC3zGrIplNbuoRJvhrGDS6bzKegmc8UsoIa_eZ9YmqB4AtfTXO7pUmceWmdREy1uNidb6ZyX_WKrC65iPjXotfHabV8EkMFfA-CCp_Qns0LYtEBD1nno5KsgYZinhGdnRV-ETy_D5xwWBE95WYChaWjFspfJZqo04lDtVpMjuLBo7u39FXYft2vV928Ar_mePF-CBgf02xDjfyZlynBfhH---ZPPR3n_aonJbqGI);
+}
+
+.head-line-text {
+    font-size: 20pt;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 2px lightsalmon;
+}
+
+.main-text {
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 1px 1px 2px grey;
+}
+
+.swiper-pagination,
+.swiper-button-next,
+.swiper-button-prev {
+    color: lightcoral;
+}
+
+/* ************************************************************ */
+
+.stores-img-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+
+.stores-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.stores-img:hover {
+    filter: grayscale(100%);
+}
+
+.store-title {
+    font-weight: 100;
+    font-size: 15pt;
+}
