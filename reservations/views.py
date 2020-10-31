@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Reservation
+from .models import Reservation, Place
 from .forms import ReservationForm, UpdateReservationForm
 from django.http import HttpResponse, HttpResponseRedirect, request
 
@@ -11,16 +11,26 @@ def reservation(request):
     return render(request, 'reservation_list.html', context)
 
 
-def reservation_create(request):
+def reservation_create(request, place_id):
+    place = get_object_or_404(Place, pk=place_id)
     if request.method == 'POST':
         request.POST._mutable = True
         request.POST['user'] = request.user
+        request.POST['place'] = place
         form = ReservationForm(request.POST, request.FILES)
         if form.is_valid():
             new_item = form.save()
         return redirect('reservation-list')
+    # else :
+    #     request.POST._mutable = True
+    #     request.POST['user'] = request.user
+    #     request.POST['place'] = item
+    #     form = ReservationForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         new_item = form.save()
+    #     return redirect('reservation-create')
     form = ReservationForm(request.FILES)
-    return render(request, 'reservation_create.html', {'form': form})
+    return render(request, 'reservation_create.html', {'form': form, 'place':place })
 
 
 def reservation_update(request):
