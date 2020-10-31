@@ -12,7 +12,7 @@ let iwRemoveable = true;        // 인포 윈도우 내 'X' 버튼 정의
 let positions = [
     {
         content: '<div class="infoWindows">' +
-            '<img src="img/img1.jpg" alt = "My Image" width="100px" height="100px" class="infoWindows-img">' +
+            '<img src="{% static images/img1.jpg %}" alt = "My Image" width="100px" height="100px" class="infoWindows-img">' +
             '<div class="infoWindows-sub">'+
             '<b class="infoWindows-sub-title">스타벅스 천안 불당점</b>' +
             '<span class="infoWindows-sub-description">' +
@@ -25,7 +25,6 @@ let positions = [
             '<input type="button" style="width:70pt;height:20pt;" value="예약">' +
             '</div>'+
             '</div>'+
-
         '</div>',
         removable: iwRemoveable,
         latlng: new kakao.maps.LatLng(36.809982, 127.111104)

@@ -80,9 +80,6 @@ a:hover {
 
 /* Footer */
 .footer {
-    position: relative;
-    left: 0%;
-    bottom: 0%;
     display: inline-flex;
     width: 100%;
     padding: 2vw 12vw 2vw 12vw;
@@ -91,7 +88,6 @@ a:hover {
     background-position: center;
     background-size: cover;
     background-image: url('../images/background-img.png');
-    /* background-image: url('../css/stores.css'); */
 }
 
 .footer-text {
@@ -107,3 +103,89 @@ a:hover {
 /* ************************************************************ */
 
 /* content */
+
+/* [sehwan] */
+
+/* 전체 컨테이너 css */
+.out {
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* 소개 문구 css */
+.intro {
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 40pt;
+  margin-bottom: 3%;
+  text-shadow: 1px 2px 2px lightcoral;
+}
+
+/* 백, 프론트 인원 div 공통 css */
+.back-end,
+.front-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* 프론트 전체 div css */
+.front-end {
+  padding: 5%;
+  justify-content: space-around;
+}
+
+/* 백 전체 div css */
+.back-end .profile {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* 프로필 전체를 감싸는 div css */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 프로필 이미지 css */
+.profile-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #FFB8B9;
+  border-radius: 100px;
+  margin-bottom: 5%;
+  z-index: 2;
+}
+
+/* 프로필 인원 소개문구를 감싸는 div css */
+.profile-box {
+  position: relative;
+  width: 300px;
+  height: auto;
+  top: -70px;
+  z-index: 1;
+  background-color: #F8F8FF;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+
+/* 프로필 소개 문구 css */
+.profile-content {
+  color:	#808080;
+}
+
+/* 이름 css */
+.name {
+  font-weight: bold;
+  font-size: 30px;
+}
