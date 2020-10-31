@@ -24,4 +24,7 @@ urlpatterns = [
     # path('', include('accounts.urls')),
     path('', include('places.urls')),
     path('', include('reservations.urls')),
+    path('accounts/', include('rest_auth.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
