@@ -15,13 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from accounts import urls as acc_urls
-
+from django.conf.urls import url
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(acc_urls)),
+    path('', include('accounts.urls')),
+    path('', include('places.urls')),
+    path('', include('reservations.urls')),
     path('accounts/', include('rest_auth.urls')),
     path('accounts/', include('allauth.urls')),
     path('api-auth/', include('rest_framework.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
