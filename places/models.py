@@ -6,6 +6,7 @@ class Place(models.Model):
     description = models.TextField(max_length=1000, blank=True, null=True)
     latitude = models.FloatField(default=0, null=True)
     longitude = models.FloatField(default=0, null=True)
+    state = models.BooleanField(default=False)
     light = models.FloatField(default=0, null=True)
     PIR = models.IntegerField(default=0, null=True)
 
