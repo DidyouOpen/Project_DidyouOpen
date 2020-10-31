@@ -1,0 +1,11 @@
+<h1>place-create</h1>
+
+    <form enctype="multipart/form-data" action="{% url 'place-create' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ form.instance.id }}"/>
+        <div>
+            {{ form.as_p }}
+        </div>
+        <button type="submit">장소 등록</button>
+    </form>
+</div>
