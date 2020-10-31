@@ -92,7 +92,8 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../base/img/background-img.png');
+    background-image: url('../images/background-img.png');
+    
 }
 
 .footer-text {

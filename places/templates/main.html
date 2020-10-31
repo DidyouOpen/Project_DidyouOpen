@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block style %}{% endblock %}
+<!-- {% block style %}{% endblock %} -->
 {% block title %}라이온더스{% endblock %}
 {% block content %}
 <!-- 작업자 : 하얀 -->
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,20 +20,9 @@
     <script src="../package/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 
-<body>
-    <!-- 전체 컨테이너 -->
-    <div class="container">
-        <!-- 헤더 -->
-        <div class="header">
-            <img class="logo" src="../base/img/logo.png" alt="">
-            <div class="header-links">
-                <a href="">Stores</a>
-                <a href="">About</a>
-                <a href="">Social Login</a>
-            </div>
-        </div>
         <!-- 컨텐츠 -->
         <div class="content">
             <!-- Swiper -->
@@ -97,26 +84,5 @@
                 <label class="store-title">두나네 마카롱</label>
             </div>
         </div>
-        <!-- 푸터 -->
-        <div class="footer">
-            <div class="footer-text">
-                "Did you Open?"
-            </div>
-            <div class="text-light">
-                <label class="bold-text">(주)낮과밥</label><br><br>
-                팀장 : 장하얀 / 충청남도 천안시 서북구 불당4로 105 오엔시티 호텔<br>
-                호스팅 서비스 : 낮과밥<br><br>
-                COPYRIGHT © TENBYTEN ALL RIGHTS RESERVED.
-            </div>
-            <div class="footer-cs">
-                <label class="bold-text">1:1 상담 문의 > </label><br><br>
-                <label class="light-text">문의는 1:1 상담을 이용해주세요.</label>
-            </div>
-        </div>
-    </div>
-</body>
 <!-- 우리 JS 파일 경로-->
-<script src="../static/js/main.js"></script>
-
-</html>
 {% endblock %}

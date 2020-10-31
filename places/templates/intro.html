@@ -1,0 +1,114 @@
+<!--[sehwan]-->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DidyouOpen?</title>
+    <link rel="stylesheet" href="{% static 'css/intro.css' %}">
+</head>
+        <!-- 컨텐츠 -->
+        <div class="content">
+            <!--전체 프로필을 감싸는 컨테이너-->
+            <div class='out'>
+                <!-- 소개 문구 -->
+                <div class="intro">INTRODUCTION</div>
+                <!-- 팀 이름을 감싸는 div -->
+                <div>
+                <!-- 프론트 인원 전원을 담고있는 div -->
+                <div class='front-end'>
+                    <!--프로필 1-->
+                    <!-- 장하얀 프로필 전체를 감싸는 div -->
+                    <div class='profile'>
+                        <!-- 장하얀 프로필 이미지 -->
+                        <img class="profile-image" src="{% static 'images/whitejang.jpg' %}"></button>
+                        <!-- 장하얀 소개 문구를 감싸는 div -->
+                        <div class="profile-box">
+                            <!-- 이름 : 장하얀 -->
+                            <p class="name">장하얀</p>
+                            <!-- 장하얀 소개 문구 -->
+                            <div class="profile-content">
+                                <p>Team Leader & Front-End Developer</p>
+                                <p>Git : https://github.com/white-jang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--프로필 2-->
+                    <!-- 송윤민 프로필 전체를 감싸는 div -->
+                    <div class='profile'>
+                        <!-- 송윤민 프로필 이미지 -->
+                        <img class="profile-image" src="{% static 'images/yunmin.jpg' %}"></button>
+                        <!-- 송윤민 소개 문구를 감싸는 div -->
+                        <div class="profile-box">
+                            <!-- 이름 : 송윤민 -->
+                            <p class="name">송윤민</p>
+                            <!-- 송윤민 소개 문구 -->
+                            <div class="profile-content">
+                                <p>Front-End Developer</p>
+                                <p>Git : https://github.com/SongYunMin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--프로필 3-->
+                    <!-- 최세환 프로필 전체를 감싸는 div -->
+                    <div class='profile'>
+                        <!-- 최세환 프로필 이미지 -->
+                        <img class="profile-image" src="{% static 'images/sehwan.jpg' %}"></button>
+                        <!-- 최세환 소개 문구를 감싸는 div -->
+                        <div class="profile-box">
+                            <!-- 이름 : 최세환 -->
+                            <p class="name">최세환</p>
+                            <!-- 최세환 소개 문구 -->
+                            <div class="profile-content">
+                                <p>Front-End Developer</p>
+                                <p>Git : https://github.com/Mactto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 백엔드 인원 전원을 감싸고 있는 div -->
+                <div class="back-end">
+                    <!--프로필 4 -->
+                    <!-- 박찬종 프로필 전체를 감싸는 div -->
+                    <div class='profile'>
+                        <!-- 박찬종 프로필 이미지 -->
+                        <img class="profile-image" src="{% static 'images/chanjong.png' %}"></button>
+                        <!-- 박찬종 소개 문구를 감싸는 div -->
+                        <div class="profile-box">
+                            <!-- 이름 : 박찬종 -->
+                            <p class="name">박찬종</p>
+                            <!-- 박찬종 소개 문구 -->
+                            <div class="profile-content">
+                                <p>Arduino Modeling</p>
+                                <p>Back-End Developer</p>
+                                <p>Git : https://github.com/Chanjongp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--프로필 5 -->
+                    <!-- 김율희 프로필 전체를 감싸는 div -->
+                    <div class='profile'>
+                        <!-- 김율희 프로필 이미지 -->
+                        <img class="profile-image" src="{% static 'images/yulhee.jpg' %}"></button>
+                        <!-- 김율희 소개 문구 전체를 감싸는 div -->
+                        <div class="profile-box">
+                            <!-- 이름 : 김율희 -->
+                            <p class="name">김율희</p>
+                            <!-- 김율희 소개 문구 -->
+                            <div class="profile-content">
+                                <p>Database Management</p>
+                                <p>Back-End Developer</p>
+                                <p>Git : https://github.com/yulhee741</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- 푸터 -->
+    </div>
+{% endblock %}
+
+</html>
