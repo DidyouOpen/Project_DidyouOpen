@@ -90,7 +90,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/background-img.png');
+    background-image: url('./images/background-img.png');
     /* background-image: url('../css/stores.css'); */
 }
 

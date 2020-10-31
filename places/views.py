@@ -3,6 +3,9 @@ from .models import Place
 from .forms import PlaceForm, UpdatePlaceForm
 from django.http import HttpResponse, HttpResponseRedirect, request
 
+def home(request):
+    return render(request, "main.html")
+
 def place(request):
     places = Place.objects.all()
     context = {
