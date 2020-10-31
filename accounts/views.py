@@ -10,10 +10,10 @@ from django.contrib.auth import login
 BASE_URL = 'http://127.0.0.1:8000/'
 
 
-
-
 def kakao_login(request):
+    print(request.GET)
     rest_api_key =  getattr(settings, 'KAKAO_REST_API_KEY')
+    print(123123123)
     redirect_uri = BASE_URL + "accounts/kakao/callback/"
     print(redirect_uri)
     return redirect(
