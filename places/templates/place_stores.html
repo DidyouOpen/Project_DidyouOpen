@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <!-- 컨텐츠 -->
-    <div class="content">
-        <div id="map" style="width:100%;height:500px;"></div>
-        <!-- <script src="{% static 'js/stores.js' %}"></script> -->
-        <script type="text/javascript">
+<!-- 컨텐츠 -->
+<div class="content">
+    <div id="map" style="width:100%;height:500px;"></div>
+    <!-- <script src="{% static 'js/stores.js' %}"></script> -->
+    <script type="text/javascript">
             let mapContainer = document.getElementById('map'), // 지도를 표시할 div
                 mapOption = {
                     center: new kakao.maps.LatLng(36.809982, 127.111104), // 처음 나타날 지도 위치 위, 경도
@@ -33,7 +33,7 @@
                         '<input type=button style="width:50pt;height:20pt;" value="Close">' +
                         "{% endif %}" +
                         // 아래 버튼에 예약 페이지 링크 첨부 하시면 됩니다
-                        '<input type="button" style="width:70pt;height:20pt;" value="예약">' +
+                        <a href="" onclick="estimate_popup();">'<input type="button" style="width:70pt;height:20pt;" value="예약">'</a> +
                         '</div>'+
                         '</div>'+
 
@@ -62,6 +62,11 @@
                     infowindow.open(map, marker);
                 });
             }
-        </script>
-    </div>
+
+        function estimate_popup() {
+            window.open("{% url 'reservation-create' item.id %}", "a","width=800, height=500")
+        }
+
+    </script>
+</div>
 {% endblock %}
