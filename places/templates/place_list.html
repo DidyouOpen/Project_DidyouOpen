@@ -3,7 +3,7 @@
 {% if item.image %}
 <img class="" id="image{{item.id}}" src="{{ item.image.url }}" , alt="">
 {% endif %}
-<a href="{% url 'place-create' %}">장소 등록</a>
+
 <div id="title{{item.id}}">{{item.title }}</div>
 <div id="description{{item.id}}">{{item.description }}</div>
 <div id="state{item.id}}">가게 상태: {{ item.state }}</div>
@@ -12,6 +12,19 @@
     <button type="submit">수정하기</button>
     <br/>
 </form>
+<a href="" onclick="estimate_popup();">
+    <div>예약하러 가기</div>
+</a>
+
+<script>
+
+        function estimate_popup() {
+            window.open("{% url 'reservation-create' item.id %}", "a","width=800, height=500")
+        }
+
+
+</script>
+
 {% endfor %}
 
 

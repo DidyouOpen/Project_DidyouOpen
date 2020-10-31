@@ -1,5 +1,4 @@
 <h1>Reservation</h1>
-<a href="{% url 'reservation-create' %}">예약하기</a>
 
 {% for item in reservations %}
 <div id="title{{item.id}}">{{ item.place }}</div>

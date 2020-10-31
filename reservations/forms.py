@@ -18,6 +18,7 @@ class ReservationForm(forms.ModelForm):
             'created_at': _('예약날짜 및 시간'),
         }
         widgets = {
+            'place': forms.HiddenInput(),
             'user': forms.HiddenInput(),
             'created_at' : DateInput(),
         }
