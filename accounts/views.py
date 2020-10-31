@@ -39,8 +39,7 @@ def kakao_callback(request):
         properties = profile_json.get('properties')
         kakao_account = profile_json.get('kakao_account')
         profile = kakao_account.get("profile")
-        nickanme = profile.get("nickname")
-        email = profile.get("email")
+        nickname = profile.get("nickname")
 
         data = {'access_token' : access_token, 'code' : code}
         accept = requests.post(
@@ -48,8 +47,12 @@ def kakao_callback(request):
         )
         accept_json = accept.json()
         accept_user = accept_json.get("user")
-        pk = accept_user.get("pk")        
-        user = User.objects.get(pk=pk)
+        pk = accept_user.get("pk")
+        try:        
+            user = User.objects.get(pk=pk)
+            User.objects.filter(pk=pk).update(nickname=nickname)
+        except KaKaoException:
+            return redirect('/error_user/')
         login(
             request,
             user,
