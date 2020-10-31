@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
-
+    'places',
+    'reservations',
     #django-allauth
     'allauth',
     'allauth.account',
@@ -59,7 +60,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.kakao',
 
 ]
-from django.db.models.fields import serializers.py
+
 SITE_ID = 1
 
 MIDDLEWARE = [
