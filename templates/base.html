@@ -1,0 +1,49 @@
+<!-- 작업자 : 하얀 -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DidyouOpen?</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4dcec8e7b5b3a6b96be65dd7e5ade373"></script>
+    <script src="{% static 'js/stores.js' %}"></script>
+
+</head>
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="">
+            <div class="header-links">
+                <a href="">Stores</a>
+                <a href="">About</a>
+                <a href="{% url  'kakao_login' %}">Social Login</a>
+            </div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div class="content">
+            {% block content %}
+            {% endblock %}   
+        </div>
+        <!-- 푸터 -->
+        <div class="footer">
+            <div class="footer-text">
+                "Did you Open?"
+            </div>
+            <div class="text-light">
+                <label class="bold-text">(주)낮과밥</label><br><br>
+                팀장 : 장하얀 / 충청남도 천안시 서북구 불당4로 105 오엔시티 호텔<br>
+                호스팅 서비스 : 낮과밥<br><br>
+                COPYRIGHT © TENBYTEN ALL RIGHTS RESERVED.
+            </div>
+            <div class="footer-cs">
+                <label class="bold-text">1:1 상담 문의 > </label><br><br>
+                <label class="light-text">문의는 1:1 상담을 이용해주세요.</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
