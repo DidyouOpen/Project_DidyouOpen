@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
-
 class UserManager(BaseUserManager):
     """
     Custom user model manager where email is the unique identifiers
