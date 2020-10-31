@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.kakao',
-
+    'django_cleanup',
 ]
 
 SITE_ID = 1
