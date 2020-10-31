@@ -1,12 +1,12 @@
 <h1>place</h1>
 {% for item in places %}
-{% if item.img %}
-<img class="" id="image{{item.id}}" src="{{ item.img.url }}" , alt="">
+{% if item.image %}
+<img class="" id="image{{item.id}}" src="{{ item.image.url }}" , alt="">
 {% endif %}
 <a href="{% url 'place-create' %}">장소 등록</a>
 <div id="title{{item.id}}">{{item.title }}</div>
 <div id="description{{item.id}}">{{item.description }}</div>
-<div id="state{item.id}}">가게 상태: {{item.state }}</div>
+<div id="state{item.id}}">가게 상태: {{ item.state }}</div>
 <form action="{% url 'place-update' %}?id={{ item.id }}" name="update" method="post">
     {% csrf_token %}
     <button type="submit">수정하기</button>

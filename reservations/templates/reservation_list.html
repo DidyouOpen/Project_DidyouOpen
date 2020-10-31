@@ -1,16 +1,36 @@
 <h1>Reservation</h1>
-{% for item in places %}
-{% if item.img %}
-<img class="" id="image{{item.id}}" src="{{ item.img.url }}" , alt="">
-{% endif %}
 <a href="{% url 'reservation-create' %}">예약하기</a>
-<div id="title{{item.id}}">{{item.place }}</div>
-<div id="description{{item.id}}">예약자 : {{item.user.nickname }}</div>
-<div id="state{item.id}}">예약 날짜 : {{item.created_at }}</div>
+
+{% for item in reservations %}
+<div id="title{{item.id}}">{{ item.place }}</div>
+<div id="user{{item.id}}">예약자 : {{ item.user.email }}</div>
+<div id="state{item.id}}">예약 날짜 : {{ item.created_at }}</div>
+<div id="comment{item.id}}">예약 날짜 : {{ item.comment }}</div>
+
 <form action="{% url 'reservation-update' %}?id={{ item.id }}" name="update" method="post">
     {% csrf_token %}
     <button type="submit">예약 수정</button>
     <br/>
+</form>
+<form action="{% url 'reservation-delete' id=item.id %}" onsubmit="return getConfirmation()" name="delete" method="post">
+    {% csrf_token %}
+    <script>
+                                                    function getConfirmation()
+                                                        {
+                                                            var retVal = confirm("삭제하시겠습니까?");
+                                                            if (retVal == true)
+                                                            {
+                                                                return true;
+                                                            }
+                                                            else
+                                                            {
+                                                                return false;
+                                                            }
+                                                        }
+
+    </script>
+    <button type="submit">삭제</button>
+</form>
 </form>
 {% endfor %}
 
