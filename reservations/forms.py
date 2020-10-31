@@ -1,28 +1,35 @@
 from django import forms
 from .models import Reservation
+from django.contrib.admin import widgets
 from django.utils.translation import gettext_lazy as _
+from django import forms
+from functools import partial
+from datetimepicker.widgets import DateTimePicker
 
+DateInput = partial(forms.DateTimeInput, {'class': 'datepicker'})
 
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
         fields = ['place', 'comment', 'user', 'created_at']
         labels = {
-            'place':_('장'),
-            'comment': _('코멘'),
+            'place':_('장소'),
+            'comment': _('코멘트'),
             'created_at': _('예약날짜 및 시간'),
         }
         widgets = {
             'user': forms.HiddenInput(),
+            'created_at' : DateInput(),
         }
         help_texts = {
 
         }
 
 
-class UpdateHistoryForm(ReservationForm):
+class UpdateReservationForm(ReservationForm):
     class Meta:
         model = Reservation
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)

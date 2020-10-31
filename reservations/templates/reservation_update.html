@@ -1,0 +1,12 @@
+<h1>reservation-update</h1>
+    {% if validation %}
+        {% endif %}
+    <form enctype="multipart/form-data" action="{% url 'reservation-update' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ form.instance.id }}"/>
+        <div>
+            {{ form.as_p }}
+        </div>
+        <button type="submit">수정완료</button>
+    </form>
+</div>
