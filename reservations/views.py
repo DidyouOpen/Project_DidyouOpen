@@ -4,15 +4,16 @@ from .forms import ReservationForm, UpdateReservationForm
 from django.http import HttpResponse, HttpResponseRedirect, request
 
 def reservation(request):
-    reservations = Reservation.objects.all()
+    reservations = Reservation.objects.all().order_by('-created_at')
     context = {
-        'reservation': reservations,
+        'reservations': reservations,
     }
     return render(request, 'reservation_list.html', context)
 
 
 def reservation_create(request):
     if request.method == 'POST':
+        request.POST._mutable = True
         request.POST['user'] = request.user
         form = ReservationForm(request.POST, request.FILES)
         if form.is_valid():
