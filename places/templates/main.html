@@ -1,30 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
-<!-- {% block style %}{% endblock %} -->
-{% block title %}라이온더스{% endblock %}
-{% block content %}
-<!-- 작업자 : 하얀 -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DidyouOpen?</title>
+{% block title %}DidyouOpen? - Main{% endblock %}
+{% block head %}
     <!-- 외부에서 가져오는 css 파일 경로 -->
     <link rel="stylesheet" href="../package/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- 우리 css 파일 경로 -->
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
     <!-- 외부에서 가져오는 JS 파일 경로 -->
     <script src="../package/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-</head>
-
-        <!-- 컨텐츠 -->
-        <div class="content">
+{% endblock %}
+{% block content %}
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -33,7 +23,7 @@
                             <h1>Neon-Moon;</h1>
                         </div>
                         <div class="main-text">
-                            [ SLEEPY WORLD ]
+                            [ SLEEPY WORLD ] 
                             <br>
                             7-80년대 미국 레트로 스타일을 재해석한 네온문의 아이덴티티를 담고 있는 슬리피 월드 오리지널 캐릭터입니다.
                         </div>
@@ -83,6 +73,7 @@
                 <label class="store-title">오페라빈</label>
                 <label class="store-title">두나네 마카롱</label>
             </div>
-        </div>
-<!-- 우리 JS 파일 경로-->
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

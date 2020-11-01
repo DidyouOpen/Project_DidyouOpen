@@ -1,19 +1,17 @@
 <!--[sehwan]-->
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}DidyouOpen? - About{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/intro.css' %}">
+{% endblock %}
 {% block content %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DidyouOpen?</title>
-    <link rel="stylesheet" href="{% static 'css/intro.css' %}">
-</head>
         <!-- 컨텐츠 -->
         <div class="content">
             <!--전체 프로필을 감싸는 컨테이너-->
-            <div class='out'>
+            <div class="out">
                 <!-- 소개 문구 -->
-                <div class="intro">INTRODUCTION</div>
+                <div class="intro">Introduction;</div>
                 <!-- 팀 이름을 감싸는 div -->
                 <div>
                 <!-- 프론트 인원 전원을 담고있는 div -->
@@ -30,7 +28,7 @@
                             <!-- 장하얀 소개 문구 -->
                             <div class="profile-content">
                                 <p>Team Leader & Front-End Developer</p>
-                                <p>Git : https://github.com/white-jang</p>
+                                <p>Git : <a href="https://github.com/white-jang">https://github.com/white-jang</a></p>
                             </div>
                         </div>
                     </div>
@@ -45,8 +43,8 @@
                             <p class="name">송윤민</p>
                             <!-- 송윤민 소개 문구 -->
                             <div class="profile-content">
-                                <p>Front-End Developer</p>
-                                <p>Git : https://github.com/SongYunMin</p>
+                                <p>Front-End Developer & JS</p>
+                                <p>Git : <a href="https://github.com/SongYunMin">https://github.com/SongYunMin</a></p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +60,7 @@
                             <!-- 최세환 소개 문구 -->
                             <div class="profile-content">
                                 <p>Front-End Developer</p>
-                                <p>Git : https://github.com/Mactto</p>
+                                <p>Git : <a href="https://github.com/Mactto">https://github.com/Mactto</a></p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +80,7 @@
                             <div class="profile-content">
                                 <p>Arduino Modeling</p>
                                 <p>Back-End Developer</p>
-                                <p>Git : https://github.com/Chanjongp</p>
+                                <p>Git : <a href="https://github.com/Chanjongp">https://github.com/Chanjongp</a></p>
                             </div>
                         </div>
                     </div>
@@ -99,7 +97,7 @@
                             <div class="profile-content">
                                 <p>Database Management</p>
                                 <p>Back-End Developer</p>
-                                <p>Git : https://github.com/yulhee741</p>
+                                <p>Git : <a href="https://github.com/yulhee741">https://github.com/yulhee741</a> </p>
                             </div>
                         </div>
                     </div>
@@ -110,5 +108,3 @@
         <!-- 푸터 -->
     </div>
 {% endblock %}
-
-</html>

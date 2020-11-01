@@ -29,5 +29,6 @@ class Valueview(APIView):
         res = ser.readline()
         value = (res.decode()[:-1])
         json_data = json.loads(value)
+        print(json_data)
         ser.close() 
         return render(request, 'place_stores.html',{ 'data' : json_data })
