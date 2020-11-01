@@ -1,107 +1,3 @@
-/*
-
-    base css입니다.
-    Noto Sans KR, Dancing Script 폰트 추가했습니다.
-
-*/
-
-/* css 초기화, 폰트 import */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Noto+Sans+KR:wght@100;400;700&display=swap');
-
-/* 메인 테마 컬러 정의 */
-:root {
-    --coral: #f08080;
-}
-
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Noto Sans KR', sans-serif;
-    overflow-x: hidden;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-/* ************************************************************ */
-/* text 관련 클래스 */
-.bold-text {
-    font-weight: 700;
-}
-
-.light-text {
-    font-weight: 300;
-}
-
-/* ************************************************************ */
-
-/* Header */
-.header {
-    width: 100%;
-    border-bottom: 1px solid lightgrey;
-    padding: 10px 10vw 20px 10vw;
-}
-
-.header-links {
-    margin-left: 44vw;
-    width: 20vw;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-    text-shadow: 1px 2px 2px lightcoral;
-}
-
-.kakao-login {
-    background-color: white;
-    border: 2px solid lightcoral;
-    border-radius: 30px;
-    padding: 8px;
-}
-
-.kakao-login>a {
-    font-weight: 400;
-}
-
-/* ************************************************************ */
-
-/* Footer */
-.footer {
-    position: relative;
-    left: 0%;
-    bottom: 0%;
-    display: inline-flex;
-    width: 100%;
-    padding: 2vw 12vw 2vw 12vw;
-    border-top: 1px solid var(--coral);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('../images/background-img.png');
-}
-
-.footer-text {
-    font-size: 25pt;
-    font-family: 'Dancing Script', cursive;
-    margin-right: 5vw;
-}
-
-.footer-cs {
-    margin-left: 15vw;
-}
 
 /* ************************************************************ */
 
@@ -110,11 +6,18 @@ a:hover {
 .infoWindows{
     display: flex;
     flex-direction: row;
+    padding: 10px 0 10px 10px;
 }
 
 .infoWindows-img{
-    display: flex;
-    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.infoWindows-sub-title {
+    font-size: 13pt;
 }
 
 .infoWindows-sub{
@@ -123,8 +26,6 @@ a:hover {
 }
 
 .infoWindows-sub-description{
-    display: flex;
-    flex-direction: column;
     color: gray;
     word-break: keep-all;
     width: 300px;
@@ -133,8 +34,23 @@ a:hover {
 
 .infoWindows-Button{
     display: flex;
-    flex-direction: row;
-    margin-top: 5%;
+    margin-top: 7%;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.info-open {
+    width: 120px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightcoral;
+    color: var(--coral);
+}
+
+.info-close {
+    width: 120px;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 20px;
+    color: var(--coral);
 }
