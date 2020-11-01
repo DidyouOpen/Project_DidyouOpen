@@ -1,4 +1,10 @@
-<h1>reservation-update</h1>
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block style %}{% endblock %} -->
+{% block title %}라이온더스{% endblock %}
+{% block content %}
+
+<h1>예약 수정</h1>
     {% if validation %}
         {% endif %}
     <form enctype="multipart/form-data" action="{% url 'reservation-update' %}" method="post">
@@ -10,3 +16,9 @@
         <button type="submit">수정완료</button>
     </form>
 </div>
+
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block style %}{% endblock %} -->
+{% block title %}라이온더스{% endblock %}
+{% block content %}

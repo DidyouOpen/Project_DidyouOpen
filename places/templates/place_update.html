@@ -1,3 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block style %}{% endblock %} -->
+{% block title %}라이온더스{% endblock %}
+{% block content %}
+
 <h1>place-update</h1>
     {% if validation %}
         {% endif %}
@@ -10,3 +16,6 @@
         <button type="submit">수정완료</button>
     </form>
 </div>
+
+
+{% endblock %}

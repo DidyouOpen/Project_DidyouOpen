@@ -1,3 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block style %}{% endblock %} -->
+{% block title %}라이온더스{% endblock %}
+{% block content %}
+
 <h1>Reservation</h1>
 
 {% for item in reservations %}
@@ -32,3 +38,4 @@
 {% endfor %}
 
 
+{% endblock %}

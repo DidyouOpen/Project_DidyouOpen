@@ -1,30 +1,42 @@
-<h1>place</h1>
-{% for item in places %}
-{% if item.image %}
-<img class="" id="image{{item.id}}" src="{{ item.image.url }}" , alt="">
-{% endif %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}DidyouOpen? - Reservation {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/place-list.css' %}"/>
+<div class="container">
 
-<div id="title{{item.id}}">{{item.title }}</div>
-<div id="description{{item.id}}">{{item.description }}</div>
-<div id="state{item.id}}">가게 상태: {{ item.state }}</div>
-<form action="{% url 'place-update' %}?id={{ item.id }}" name="update" method="post">
-    {% csrf_token %}
-    <button type="submit">수정하기</button>
-    <br/>
-</form>
-<a href="" onclick="estimate_popup();">
-    <div>예약하러 가기</div>
-</a>
+    {% for item in places %}
+    {% if item.image %}
+    <div class="img-box">
+        <img class="place-image" src="{{ item.image.url }}" , alt="">
+        {% endif %}
+    </div>
+    <div class="item">
+        <div class="item-title" id="title{{item.id}}" style="font-size:20px;">{{item.title }}</div>
+        <div class="item-des" id="description{{item.id}}">{{item.description }}</div>
+        <form action="{% url 'place-update' %}?id={{ item.id }}" name="update" method="post">
+            {% csrf_token %}
+            <button type="submit" style="width: 35%; height: 25px; color:lightcoral; border-radius: 20px; border: 0;">수정하기</button>
+            <br/>
+        </form>
+        <a href="" onclick="estimate_popup();">
+            <div stlye="font-size: 40px;">예약하러 가기</div>
+        </a>
 
-<script>
+        <script>
 
         function estimate_popup() {
             window.open("{% url 'reservation-create' item.id %}", "a","width=800, height=500")
         }
 
 
-</script>
 
-{% endfor %}
 
+        </script>
+        <div class="border"></div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
 

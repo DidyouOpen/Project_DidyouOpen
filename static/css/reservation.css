@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    width: 90vw;
+    height: 2px;
+    background: #C2C2C2;
+    margin: 26px auto;
+}
+
+.form-container{
+    width: 100%;
+    height: 10%;
+}
