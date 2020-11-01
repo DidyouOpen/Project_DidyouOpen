@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DidyouOpen?</title>
+    <title>{% block title %}DidyouOpen?{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4dcec8e7b5b3a6b96be65dd7e5ade373"></script>
-    <!-- <script src="{% static 'js/stores.js' %}"></script> -->
-
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
     <!-- 전체 컨테이너 -->
@@ -18,7 +18,8 @@
         <div class="header">
          <a href="{% url 'home' %}"><img class="logo" src="{% static 'images/logo.png' %}" alt=""></a>
             <div class="header-links">
-                <a href="{% url 'place-stores' %}">Stores</a>
+
+                <a href="{% url 'place-stores' %}">Stores</a> 
                 <a href="{% url 'place-list' %}">Reservation</a>
                 <a href="{% url 'about' %}">About</a>
                 {% if not request.user.is_authenticated %}
@@ -50,6 +51,8 @@
             </div>
         </div>
     </div>
+    {% block js %}
+    {% endblock %}
 </body>
-
 </html>
+
