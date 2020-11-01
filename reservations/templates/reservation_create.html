@@ -3,6 +3,7 @@
 {% block title %}라이온더스{% endblock %}
 {% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 <link rel="stylesheet" href="{% static 'css/reservation.css' %}"/>
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
@@ -30,7 +31,7 @@ $(document).ready(function() {
     <div class="form-container">
         {{ form.media }}
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form | crispy }}
     <button type="submit">예약하기</button>
     </div>
 </form>
