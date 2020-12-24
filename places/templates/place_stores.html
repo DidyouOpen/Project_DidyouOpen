@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}DidyouOpen? - Stores{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/stores.css' %}">
+{% endblock %}
 {% block content %}
 <!-- 컨텐츠 -->
 <div class="content">
-    <div id="map" style="width:100%;height:500px;"></div>
+    <div id="map" style="width:100%;height:35vw"></div>
     <!-- <script src="{% static 'js/stores.js' %}"></script> -->
     <script type="text/javascript">
             let mapContainer = document.getElementById('map'), // 지도를 표시할 div
@@ -20,27 +24,25 @@
             let positions = [
                 {
                     content: '<div class="infoWindows">' +
-                        '<img src="{% static "images/img1.jpg" %}" alt = "My Image" width="100px" height="100px" class="infoWindows-img">' +
+                        '<img src="{% static "images/img1.jpg" %}" alt="My Image" class="infoWindows-img">' +
                         '<div class="infoWindows-sub">'+
-                        '<b class="infoWindows-sub-title">스타벅스 천안 불당점</b>' +
+                        '<b class="infoWindows-sub-title">스타벅스 천안 불당점</b><br>' +
                         '<span class="infoWindows-sub-description">' +
                             '시애틀에 본사를 두고 있고 간단한 스낵과 무료 Wi-Fi를 제공 하는 유명 커피 체인점 입니다.' +
                         '</span>' + 
                         '<div class="infoWindows-Button">'+
-                        "{% if data == 0%}"+
-                        '<input type=button style="width:50pt;height:20pt;" value="Open">' +
+                        "{% if data == 3%}"+
+                        '<button class="info-open">Open</button>' +
                         "{% else %}" +
-                        '<input type=button style="width:50pt;height:20pt;" value="Close">' +
+                        '<button class="info-close">Close</button>' +
                         "{% endif %}" +
-                        // 아래 버튼에 예약 페이지 링크 첨부 하시면 됩니다
-                        <a href="" onclick="estimate_popup();">'<input type="button" style="width:70pt;height:20pt;" value="예약">'</a> +
                         '</div>'+
                         '</div>'+
-
                     '</div>',
                     removable: iwRemoveable,
                     latlng: new kakao.maps.LatLng(36.809982, 127.111104)
                 },
+                /* 여기 이 부분 내가 만들다가 Open을 Close로 한거가튼디*/
             ];
 
             /***********************마커 및 인포윈도우 생성***************************/
@@ -62,10 +64,6 @@
                     infowindow.open(map, marker);
                 });
             }
-
-        function estimate_popup() {
-            window.open("{% url 'reservation-create' item.id %}", "a","width=800, height=500")
-        }
 
     </script>
 </div>

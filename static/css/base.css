@@ -47,9 +47,9 @@ body {
 }
 
 .header-links {
-    margin-left: 44vw;
-    width: 20vw;
-    display: inline-flex;
+    margin-left: 34vw;
+    width: 30vw;
+    display: inline-flex;  
     flex-wrap: nowrap;
     justify-content: space-between;
 }
